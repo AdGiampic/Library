@@ -6,14 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Library</title>
     <link rel = "stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </head>
 <body>
     <div id = "title">
         <h1>Library</h1>
     </div>
+    <div id="form">
+        <label for="book-title">Title</label>
+        <input type="text" name="book-title" id="book-title" required>
+        <label for="author">Author</label>
+        <input type="text" name="author" id="author" required>
+        <label for="pages">Nr. pages</label>
+        <input type="number" name="pages" id="pages" required min = 1>
+        <label for="read">Have you read the book?</label>
+        <input type="checkbox" id="read" name="read">
+        <button type ="submit" id = "btn-sub" onclick= addBookToLibrary()>Register Book</button>
+        <button onclick= hideForm()>Close</button>
+    </div>
     <div id = "btn-container">
-        <button id = "create-btn" onclick=createCard()>+ Add book</button>
+        <button id = "create-btn" onclick=showForm()>+ Add book</button>
     </div>
     <div id = "cards-container">
     </div>
